@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Elegant Jacket Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">ELEGANT JACKET</div>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="cart.html">Keranjang</a></li>
+        </ul>
+    </nav>
+
+    <section class="checkout-section">
+        <div class="container">
+            <h1>Checkout</h1>
+            
+            <div class="checkout-container">
+                <div class="checkout-form">
+                    <h2>Informasi Pengiriman</h2>
+                    <form id="checkoutForm">
+                        <div class="form-group">
+                            <label>Nama Lengkap</label>
+                            <input type="text" 
+                                   required 
+                                   name="fullName" 
+                                   placeholder="Masukkan nama lengkap"
+                                   style="color: #fff; background: rgba(255, 255, 255, 0.1);">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" 
+                                   id="email" 
+                                   name="email" 
+                                   required 
+                                   placeholder="Contoh: nama@email.com"
+                                   style="color: #fff; background: rgba(255, 255, 255, 0.1);">
+                            <span class="helper-text">Format: nama@domain.com</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>No. Telepon</label>
+                            <input type="tel" 
+                                   id="phone" 
+                                   name="phone" 
+                                   pattern="[0-9]{10,13}" 
+                                   required 
+                                   placeholder="Contoh: 08123456789"
+                                   style="color: #fff; background: rgba(255, 255, 255, 0.1);">
+                            <span class="helper-text">Format: 08xx-xxxx-xxxx (10-13 digit)</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Alamat Lengkap</label>
+                            <textarea required 
+                                      name="address" 
+                                      rows="3" 
+                                      placeholder="Masukkan alamat lengkap"
+                                      style="color: #fff; background: rgba(255, 255, 255, 0.1);"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Kota</label>
+                            <input type="text" 
+                                   required 
+                                   name="city" 
+                                   placeholder="Masukkan nama kota"
+                                   style="color: #fff; background: rgba(255, 255, 255, 0.1);">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Kode Pos</label>
+                            <input type="text" 
+                                   id="postalCode" 
+                                   name="postalCode" 
+                                   pattern="[0-9]{5}" 
+                                   required 
+                                   placeholder="Contoh: 12345"
+                                   style="color: #fff; background: rgba(255, 255, 255, 0.1);">
+                            <span class="helper-text">Format: 5 digit angka</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Metode Pembayaran</label>
+                            <select required name="paymentMethod">
+                                <option value="">Pilih metode pembayaran</option>
+                                <option value="transfer">Transfer Bank</option>
+                                <option value="ewallet">E-Wallet</option>
+                                <option value="cod">Cash on Delivery</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="order-summary">
+                    <h2>Ringkasan Pesanan</h2>
+                    <div class="order-items">
+                        <!-- Items will be dynamically added here -->
+                    </div>
+                    
+                    <div class="order-totals">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">Rp 0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Pengiriman</span>
+                            <span id="shipping">Rp 50.000</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="total">Rp 0</span>
+                        </div>
+                    </div>
+
+                    <button class="place-order-btn" onclick="placeOrder()">
+                        Buat Pesanan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Elegant Jacket. All rights reserved.</p>
+    </footer>
+
+    <script src="checkout.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const phoneInput = document.getElementById('phone');
+        
+        // Hanya memperbolehkan input angka
+        phoneInput.addEventListener('input', function(e) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            
+            // Batasi panjang nomor telepon
+            if (this.value.length > 13) {
+                this.value = this.value.slice(0, 13);
+            }
+        });
+
+        // Validasi saat form disubmit
+        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+            const phone = phoneInput.value;
+            
+            // Cek panjang nomor telepon
+            if (phone.length < 10 || phone.length > 13) {
+                e.preventDefault();
+                alert('Nomor telepon harus 10-13 digit');
+                return false;
+            }
+
+            // Cek format nomor Indonesia
+            if (!phone.startsWith('08')) {
+                e.preventDefault();
+                alert('Nomor telepon harus dimulai dengan 08');
+                return false;
+            }
+        });
+    });
+    </script>
+</body>
+</html> 

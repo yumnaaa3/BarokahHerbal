@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Elegant Jacket Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">ELEGANT JACKET</div>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="index.html#products">Produk</a></li>
+            <li><a href="index.html#about">Tentang</a></li>
+            <li><a href="index.html#contact">Kontak</a></li>
+            <li><a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i> Keranjang</a></li>
+            <li><a href="checkout.html"><i class="fas fa-credit-card"></i> Checkout</a></li>
+        </ul>
+    </nav>
+
+    <section class="cart-section">
+        <div class="container">
+            <h1>Keranjang Belanja</h1>
+            
+            <div class="cart-container">
+                <div class="cart-items">
+                    <!-- Item cards will be dynamically added here -->
+                </div>
+
+                <div class="cart-summary">
+                    <h2>Ringkasan Belanja</h2>
+                    <div class="summary-item">
+                        <span>Total Items:</span>
+                        <span id="total-items">0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">Rp 0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Pengiriman:</span>
+                        <span id="shipping">Rp 0</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total:</span>
+                        <span id="total">Rp 0</span>
+                    </div>
+                    <a href="checkout.html" class="checkout-button">Checkout</a>
+                    <button class="continue-shopping" onclick="window.location.href='index.html#products'">
+                        Lanjut Belanja
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Elegant Jacket. All rights reserved.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html> 

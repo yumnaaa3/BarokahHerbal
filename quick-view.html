@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Quick View - Elegant Jacket</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quick-view.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">ELEGANT JACKET</div>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="index.html#products">Produk</a></li>
+            <li><a href="index.html#about">Tentang</a></li>
+            <li><a href="index.html#contact">Kontak</a></li>
+            <li>
+                <a href="cart.html" class="cart-indicator">
+                    <i class="fas fa-shopping-cart"></i> Keranjang
+                    <span class="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="quick-view-container">
+        <div class="product-details">
+            <div class="product-gallery">
+                <img id="productImage" src="" alt="Product Image">
+                <div class="thumbnail-gallery">
+                    <img class="thumbnail active" src="" alt="Thumbnail 1">
+                    <img class="thumbnail" src="" alt="Thumbnail 2">
+                    <img class="thumbnail" src="" alt="Thumbnail 3">
+                </div>
+            </div>
+            <div class="product-info">
+                <span id="productCategory" class="category-tag"></span>
+                <h1 id="productName"></h1>
+                <p id="productPrice" class="price"></p>
+                
+                <div class="product-description">
+                    <h3>Deskripsi Produk</h3>
+                    <p id="productDescription"></p>
+                </div>
+
+                <div class="product-features">
+                    <h3>Fitur Produk</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Bahan Premium</li>
+                        <li><i class="fas fa-check"></i> Jahitan Berkualitas</li>
+                        <li><i class="fas fa-check"></i> Design Eksklusif</li>
+                        <li><i class="fas fa-check"></i> Garansi Produk</li>
+                    </ul>
+                </div>
+
+                <div class="size-selection">
+                    <h3>Pilih Ukuran</h3>
+                    <div class="size-options">
+                        <button class="size-btn">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
+                        <button class="size-btn">XL</button>
+                    </div>
+                    <a href="#" class="size-guide">Panduan Ukuran</a>
+                </div>
+
+                <div class="quantity-selector">
+                    <h3>Jumlah</h3>
+                    <div class="quantity-controls">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                </div>
+
+                <div class="product-actions">
+                    <button id="addToCartBtn" class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                    </button>
+                    <button class="wishlist-btn">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="additional-info">
+                    <div class="info-item">
+                        <i class="fas fa-truck"></i>
+                        <span>Pengiriman Gratis untuk pembelian di atas Rp 1.000.000</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-undo"></i>
+                        <span>30 Hari Garansi Pengembalian</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Elegant Jacket. All rights reserved.</p>
+    </footer>
+
+    <script src="quick-view.js"></script>
+</body>
+</html> 

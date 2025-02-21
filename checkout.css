@@ -1,0 +1,366 @@
+.checkout-section {
+    padding: 120px 50px 50px;
+    min-height: 100vh;
+    background: var(--gradient);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.checkout-section h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.checkout-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+}
+
+.checkout-form {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.checkout-form h2 {
+    color: var(--accent-color);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(201, 169, 92, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23c9a95c' viewBox='0 0 16 16'%3E%3Cpath d='M8 11l-7-7h14l-7 7z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+.form-group select option {
+    background: #222;
+    color: #fff;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(201, 169, 92, 0.2);
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.helper-text {
+    display: block;
+    font-size: 12px;
+    color: rgba(201, 169, 92, 0.8);
+    margin-top: 5px;
+}
+
+/* Style untuk error state */
+.form-group input:invalid,
+.form-group textarea:invalid {
+    border-color: #ff4444;
+}
+
+.form-group input:invalid + .helper-text {
+    color: #ff4444;
+}
+
+/* Style untuk success state */
+.form-group input:valid:not(:placeholder-shown) {
+    border-color: #00C851;
+}
+
+.order-summary {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    position: sticky;
+    top: 100px;
+}
+
+.order-summary h2 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.order-items {
+    margin-bottom: 30px;
+}
+
+.order-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.order-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-details h3 {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.item-details p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.order-totals {
+    margin-top: 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.summary-row.total {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.place-order-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.place-order-btn:hover {
+    background: #d4b56c;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(201, 169, 92, 0.3);
+}
+
+@media (max-width: 768px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .checkout-section {
+        padding: 100px 20px 30px;
+    }
+    
+    .order-summary {
+        position: static;
+    }
+}
+
+.payment-info {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.payment-info.active {
+    display: block;
+}
+
+.payment-info p {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.payment-info strong {
+    color: var(--accent-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(201, 169, 92, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="tel"]:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(201, 169, 92, 0.2);
+    outline: none;
+}
+
+.form-group input[type="tel"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group .helper-text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 5px;
+}
+
+/* Styling untuk semua input di form */
+.form-group input[type="email"],
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(201, 169, 92, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(201, 169, 92, 0.2);
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Tambahkan validasi JavaScript */
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Validasi Kode Pos
+    const postalInput = document.getElementById('postalCode');
+    postalInput.addEventListener('input', function(e) {
+        this.value = this.value.replace(/[^0-9]/g, '');
+        if (this.value.length > 5) {
+            this.value = this.value.slice(0, 5);
+        }
+    });
+
+    // Validasi Email
+    const emailInput = document.getElementById('email');
+    emailInput.addEventListener('blur', function() {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(this.value)) {
+            this.setCustomValidity('Masukkan alamat email yang valid');
+        } else {
+            this.setCustomValidity('');
+        }
+    });
+});
+</script> 

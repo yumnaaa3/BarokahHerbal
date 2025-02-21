@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbal Barokah - Toko Obat Herbal Terpercaya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="order-success.html">
+</head>
+<body>
+    <audio id="background-music" loop>
+        <source src="audio/stereo love.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <nav>
+        <div class="logo">HERBAL BAROKAH</div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#products">Produk</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#contact">Kontak</a></li>
+            <li>
+                <a href="cart.html" class="cart-indicator">
+                    <i class="fas fa-shopping-cart"></i> Keranjang
+                    <span class="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="hero-animated">
+            <!-- Tambahkan bintang-bintang -->
+            <div class="stars">
+                <div class="star" style="top: 10%; left: 20%;"></div>
+                <div class="star" style="top: 15%; left: 50%;"></div>
+                <div class="star" style="top: 25%; left: 80%;"></div>
+                <div class="star" style="top: 40%; left: 30%;"></div>
+                <div class="star" style="top: 60%; left: 70%;"></div>
+                <!-- Tambahkan lebih banyak bintang sesuai kebutuhan -->
+            </div>
+
+            <!-- Tambahkan daun-daun herbal yang melayang -->
+            <div class="floating-leaves">
+                <div class="leaf" style="left: 5%;">🌿</div>
+                <div class="leaf" style="left: 25%;">🍃</div>
+                <div class="leaf" style="left: 45%;">🌱</div>
+                <div class="leaf" style="left: 65%;">☘️</div>
+                <div class="leaf" style="left: 85%;">🍀</div>
+                <div class="leaf" style="left: 15%;">🌿</div>
+                <div class="leaf" style="left: 35%;">🍃</div>
+                <div class="leaf" style="left: 55%;">🌱</div>
+                <div class="leaf" style="left: 75%;">☘️</div>
+                <div class="leaf" style="left: 95%;">🍀</div>
+            </div>
+
+            <div class="animated-bg">
+                <div class="bg-pattern"></div>
+                <div class="bg-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-title" data-aos="fade-down">
+                    <h1 class="gradient-text">"Herbal Barokah"</h1>
+                </div>
+                <div class="music-control" data-aos="fade-up">
+                    <button id="toggle-music">Putar Musik</button>
+                </div>
+                <div class="hero-badges">
+                    <div class="badge-item" data-aos="fade-right" data-aos-delay="200">
+                        <i class="fas fa-seedling"></i>
+                        <span>100% Herbal</span>
+                    </div>
+                    <div class="badge-item" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-award"></i>
+                        <span>Bersertifikat</span>
+                    </div>
+                    <div class="badge-item" data-aos="fade-left" data-aos-delay="600">
+                        <i class="fas fa-heart"></i>
+                        <span>Berkhasiat</span>
+                    </div>
+                </div>
+                <p class="hero-tagline" data-aos="fade-up" data-aos-delay="800">
+                    Temukan Kesehatan Alami dengan Produk Herbal Berkualitas
+                </p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="1000">
+                    <a href="#products" class="cta-primary">Explore Collection</a>
+                    <a href="#about" class="cta-secondary">Our Story</a>
+                </div>
+                <div class="scroll-down" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <span>Scroll to discover</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="products-header" data-aos="fade-up">
+            <h2>Produk Herbal Pilihan</h2>
+            <p>Berbagai produk herbal berkualitas untuk kesehatan Anda</p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card" data-aos="fade-up" data-category="herbal">
+                <div class="product-image">
+                    <img src="lambung.jpeg" alt="Madu Herbal">
+                    <div class="product-overlay">
+                        <div class="quick-view">
+                            <button class="quick-view-btn" data-product-id="1">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Madu Herbal</span>
+                    <h3>Madu Sehat Lambung An Nasr</h3>
+                    <p class="price">Rp xxx</p>
+                    <div class="product-details">
+                        <div class="size-options">
+                            <span class="size-label">Ukuran:</span>
+                            <button class="size-btn">250g</button>
+                           
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="buy-button" onclick="addToCart(1, 'Madu Murni Premium', 150000, 'img/madu.jpg')">
+                            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                        </button>
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-category="herbal">
+                <div class="product-image">
+                    <img src="zalfira.jpeg" alt="Gabah Herbal">
+                    <div class="product-overlay">
+                        <div class="quick-view">
+                            <button class="quick-view-btn" data-product-id="2">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Madu Herbal</span>
+                    <h3>Zalfira Dates Honey</h3>
+                    <p class="price">Rp xxx</p>
+                    <div class="product-details">
+                        <div class="size-options">
+                            <span class="size-label">Ukuran:</span>
+                            <button class="size-btn">150g</button>
+                            
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="buy-button" onclick="addToCart(2, 'Gabah Murni Premium', 100000, 'img/gabah.jpg')">
+                            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                        </button>
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-category="herbal">
+                <div class="product-image">
+                    <img src="madubatuk.jpeg" alt="Kunyit Herbal">
+                    <div class="product-overlay">
+                        <div class="quick-view">
+                            <button class="quick-view-btn" data-product-id="3">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Madu Batuk</span>
+                    <h3>Madu Batuk An Nars</h3>
+                    <p class="price">Rp xxx</p>
+                    <div class="product-details">
+                        <div class="size-options">
+                            <span class="size-label">Ukuran:</span>
+                            <button class="size-btn">175g</button>
+                            
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="buy-button" onclick="addToCart(3, 'Kunyit Murni Premium', 120000, 'img/kunyit.jpg')">
+                            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                        </button>
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-category="herbal">
+                <div class="product-image">
+                    <img src="hulbah60.jpeg" alt="Jahe Herbal">
+                    <div class="product-overlay">
+                        <div class="quick-view">
+                            <button class="quick-view-btn" data-product-id="4">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Habbatussauda</span>
+                    <h3>Habbatussauda Hulbah 4 in 1</h3>
+                    <p class="price">Rp xxx</p>
+                    <div class="product-details">
+                        <div class="size-options">
+                            <span class="size-label">Ukuran:</span>
+                            <button class="size-btn">60 kapsul</button>
+                            
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="buy-button" onclick="addToCart(4, 'Jahe Murni Premium', 100000, 'img/jahe.jpg')">
+                            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                        </button>
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-category="herbal">
+                <div class="product-image">
+                    <img src="hulbah100.jpeg" alt="Teh Herbal">
+                    <div class="product-overlay">
+                        <div class="quick-view">
+                            <button class="quick-view-btn" data-product-id="5">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Habbatussauda</span>
+                    <h3>Habbatussauda Hulbah 4 in 1</h3>
+                    <p class="price">Rp xxx</p>
+                    <div class="product-details">
+                        <div class="size-options">
+                            <span class="size-label">Ukuran:</span>
+                            <button class="size-btn">100 kapsul</button>
+                           
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="buy-button" onclick="addToCart(5, 'Teh Murni Premium', 150000, 'img/teh.jpg')">
+                            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                        </button>
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-category="herbal">
+                <div class="product-image">
+                    <img src="hulbah200.jpeg" alt="Kencur Herbal">
+                    <div class="product-overlay">
+                        <div class="quick-view">
+                            <button class="quick-view-btn" data-product-id="6">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Habbatussauda</span>
+                    <h3>Habbatussauda Hulbah 4 in 1</h3>
+                    <p class="price">Rp xxx</p>
+                    <div class="product-details">
+                        <div class="size-options">
+                            <span class="size-label">Ukuran:</span>
+                            <button class="size-btn">200 kapsul</button>
+                           
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="buy-button" onclick="addToCart(6, 'Kencur Murni Premium', 120000, 'img/kencur.jpg')">
+                            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                        </button>
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-category="herbal">
+                <div class="product-image">
+                    <img src="spr60.jpeg" alt="Kunyit Herbal">
+                    <div class="product-overlay">
+                        <div class="quick-view">
+                            <button class="quick-view-btn" data-product-id="7">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Habbatussauda</span>
+                    <h3>Habbatussauda SPR</h3>
+                    <p class="price">Rp xxx</p>
+                    <div class="product-details">
+                        <div class="size-options">
+                            <span class="size-label">Ukuran:</span>
+                            <button class="size-btn">60 kapsul</button>
+                           
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="buy-button" onclick="addToCart(7, 'Kunyit Murni Premium', 120000, 'img/kunyit.jpg')">
+                            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                        </button>
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-category="herbal">
+                <div class="product-image">
+                    <img src="spr120.jpeg" alt="Jahe Herbal">
+                    <div class="product-overlay">
+                        <div class="quick-view">
+                            <button class="quick-view-btn" data-product-id="8">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Habbatussauda</span>
+                    <h3>Habbatussauda SPR</h3>
+                    <p class="price">Rp xxx</p>
+                    <div class="product-details">
+                        <div class="size-options">
+                            <span class="size-label">Ukuran:</span>
+                            <button class="size-btn">120 kapsul</button>
+                           
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="buy-button" onclick="addToCart(8, 'Jahe Murni Premium', 100000, 'img/jahe.jpg')">
+                            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                        </button>
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-category="herbal">
+                <div class="product-image">
+                    <img src="spr200.jpeg" alt="Teh Herbal">
+                    <div class="product-overlay">
+                        <div class="quick-view">
+                            <button class="quick-view-btn" data-product-id="9">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Habbatussauda</span>
+                    <h3>Habbatussauda SPR </h3>
+                    <p class="price">Rp xxx</p>
+                    <div class="product-details">
+                        <div class="size-options">
+                            <span class="size-label">Ukuran:</span>
+                            <button class="size-btn">200 kapsul</button>
+                           
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="buy-button" onclick="addToCart(9, 'Teh Murni Premium', 150000, 'img/teh.jpg')">
+                            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                        </button>
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-category="herbal">
+                <div class="product-image">
+                    <img src="mazalt.jpeg" alt="Kencur Herbal">
+                    <div class="product-overlay">
+                        <div class="quick-view">
+                            <button class="quick-view-btn" data-product-id="10">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Madu Herbal</span>
+                    <h3>Madu Mazalt Gold</h3>
+                    <p class="price">Rp xxx</p>
+                    <div class="product-details">
+                        <div class="size-options">
+                            <span class="size-label">Ukuran:</span>
+                            <button class="size-btn">150g</button>
+                           
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="buy-button" onclick="addToCart(10, 'Kencur Murni Premium', 120000, 'img/kencur.jpg')">
+                            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                        </button>
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-category="herbal">
+                <div class="product-image">
+                    <img src="ajaban.jpeg" alt="Kunyit Herbal">
+                    <div class="product-overlay">
+                        <div class="quick-view">
+                            <button class="quick-view-btn" data-product-id="11">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Madu Kurma</span>
+                    <h3>Madu Kurma Ajaban Gold</h3>
+                    <p class="price">Rp xxx</p>
+                    <div class="product-details">
+                        <div class="size-options">
+                            <span class="size-label">Ukuran:</span>
+                            <button class="size-btn">150g</button>
+                           
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="buy-button" onclick="addToCart(11, 'Kunyit Murni Premium', 120000, 'img/kunyit.jpg')">
+                            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                        </button>
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-category="herbal">
+                <div class="product-image">
+                    <img src="alsabira.jpeg" alt="Jahe Herbal">
+                    <div class="product-overlay">
+                        <div class="quick-view">
+                            <button class="quick-view-btn" data-product-id="12">
+                                <i class="fas fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Sari Kurma</span>
+                    <h3>Sari Kurma Al Sabira</h3>
+                    <p class="price">Rp 100.000</p>
+                    <div class="product-details">
+                        <div class="size-options">
+                            <span class="size-label">Ukuran:</span>
+                            <button class="size-btn">330g</button>
+                           
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="buy-button" onclick="addToCart(12, 'Jahe Murni Premium', 100000, 'img/jahe.jpg')">
+                            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                        </button>
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="products-footer" data-aos="fade-up">
+            <button class="load-more">Lihat Lebih Banyak</button>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <div class="about-content" data-aos="fade-up">
+                <h2>Tentang Kami</h2>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="tokoherbal.jpg" alt="Our Store">
+                    </div>
+                    <div class="about-text">
+                        <h3>Herbal Barokah</h3>
+                        <p>Kami adalah toko herbal terpercaya yang menyediakan berbagai produk herbal berkualitas untuk kesehatan Anda. Dengan pengalaman lebih dari 10 tahun, kami berkomitmen untuk:</p>
+                        <ul class="about-features">
+                            <li>
+                                <i class="fas fa-leaf"></i>
+                                <span>100% Herbal Alami</span>
+                                <p>Menggunakan bahan-bahan herbal pilihan berkualitas</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-certificate"></i>
+                                <span>Bersertifikat BPOM</span>
+                                <p>Produk telah teruji dan mendapat izin edar resmi</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-heart"></i>
+                                <span>Berkhasiat</span>
+                                <p>Terbukti memberikan manfaat untuk kesehatan</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-stats" data-aos="fade-up">
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Tahun Pengalaman</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Pelanggan Puas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Koleksi Produk</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Awards</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2 class="section-title" data-aos="fade-up">Hubungi Kami</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-content">
+                            <h3>Lokasi</h3>
+                            <p>Jl. Seroja 9 Bukit Asri Demaan</p>
+                            <p>Jepara, Indonesia 121314</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="info-content">
+                            <h3>Telepon</h3>
+                            <p>+62 123 3908 668</p>
+                            <p>+62 298 7654 321</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>info@herbalbarokah.com</p>
+                            <p>support@herbalbarokah.com</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/naa_03y?utm_source=qr&igsh=MXAxMnpvOGliMDdnNg==" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/aamirah_amirah?t=rimXIyDCHaAcTmC7Jxzk4Q&s=08" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/qr/JVVIYPBQGXLQB1" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-up">
+                    <div class="form-header">
+                        <h3>Kirim Pesan</h3>
+                        <p>Kami siap membantu Anda</p>
+                    </div>
+                    <form id="contactForm" onsubmit="sendToWhatsApp(event)">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i></label>
+                            <input type="text" id="nama" placeholder="Nama" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i></label>
+                            <input type="email" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-phone"></i></label>
+                            <input type="tel" id="telepon" placeholder="Nomor Telepon" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-message"></i></label>
+                            <textarea id="pesan" placeholder="Pesan" required></textarea>
+                        </div>
+                        <button type="submit">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+            <div class="map-container" data-aos="fade-up">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126915.06709645538!2d106.7891577!3d-6.2297465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta!5e0!3m2!1sen!2sid!4v1637114600000!5m2!1sen!2sid" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="mini-game">
+        <div class="game-container">
+            <h2>Herbal Barokah Hunter</h2>
+            <div class="game-stats">
+                <span>Skor: <span id="score">0</span></span>
+                <span>Waktu: <span id="time">30</span>s</span>
+                <span>Level: <span id="level">1</span></span>
+                <span>Combo: <span id="combo">0</span>x</span>
+            </div>
+            <div class="game-area">
+                <div class="power-ups">
+                    <div class="power-up freeze" title="Freeze Time">❄️</div>
+                    <div class="power-up double" title="Double Points">2️⃣</div>
+                    <div class="power-up slow" title="Slow Motion">🐌</div>
+                </div>
+                <img src="gameM.png" id="jacket" alt="Jacket">
+                <div class="obstacles"></div>
+            </div>
+            <div class="controls">
+                <button class="power-btn freeze-btn">Freeze (F)</button>
+                <button id="startGame" class="game-btn">Mulai Game</button>
+                <button class="power-btn slow-btn">Slow (S)</button>
+            </div>
+            <div id="gameResult" class="game-result"></div>
+            <div class="leaderboard">
+                <h3>Top Scores</h3>
+                <div id="topScores"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Herbal Barokah. All rights reserved.</p>
+    </footer>
+
+    <!-- Update Quick View Modal -->
+    <div id="quickViewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="product-quick-view">
+                <div class="quick-view-image">
+                    <img id="modalImage" src="" alt="Product Image">
+                </div>
+                <div class="quick-view-details">
+                    <span id="modalCategory" class="product-category"></span>
+                    <h2 id="modalName"></h2>
+                    <p id="modalPrice" class="price"></p>
+                    <div class="product-description">
+                        <h3>Deskripsi Produk</h3>
+                        <p id="modalDescription"></p>
+                    </div>
+                    <div class="size-selection">
+                        <h3>Pilih Ukuran</h3>
+                        <div id="modalSizeOptions" class="size-options">
+                            <!-- Size options will be dynamically added here -->
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" value="1" min="1" class="qty-input">
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" id="modalAddToCart">
+                            <i class="fas fa-shopping-cart"></i> Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coming Soon Overlay -->
+    <div class="coming-soon-overlay">
+        <button class="close-overlay">×</button>
+        <div class="coming-soon-content">
+            <div class="coming-soon-text">COMING SOON</div>
+            <p style="color: #ccc; font-size: 1.2rem;">Fitur ini sedang dalam pengembangan</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('background-music');
+            const toggleButton = document.getElementById('toggle-music');
+            
+            audio.volume = 0.5; // Atur volume (0.0 - 1.0)
+            audio.play().catch(error => {
+                console.log('Audio tidak dapat diputar otomatis. Pengguna harus berinteraksi dengan halaman terlebih dahulu.');
+            });
+
+            toggleButton.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play();
+                    toggleButton.textContent = 'Jeda Musik';
+                } else {
+                    audio.pause();
+                    toggleButton.textContent = 'Putar Musik';
+                }
+            });
+        });
+
+        document.querySelector('.load-more').addEventListener('click', function() {
+            const overlay = document.querySelector('.coming-soon-overlay');
+            overlay.style.display = 'flex';
+        });
+
+        document.querySelector('.close-overlay').addEventListener('click', function() {
+            const overlay = document.querySelector('.coming-soon-overlay');
+            overlay.style.display = 'none';
+        });
+
+        function sendToWhatsApp(e) {
+            e.preventDefault();
+            
+            // Ambil nilai dari form
+            const nama = document.getElementById('nama').value;
+            const email = document.getElementById('email').value;
+            const telepon = document.getElementById('telepon').value;
+            const pesan = document.getElementById('pesan').value;
+            
+            // Format pesan untuk WhatsApp
+            const text = `*Pesan Baru dari Website*
+Nama: ${nama}
+Email: ${email}
+Telepon: ${telepon}
+Pesan: ${pesan}`;
+            
+            // Encode pesan untuk URL WhatsApp
+            const encodedText = encodeURIComponent(text);
+            
+            // Buat URL WhatsApp dengan nomor Anda
+            const whatsappURL = `https://wa.me/6281223908668?text=${encodedText}`;
+            
+            // Buka WhatsApp di tab baru
+            window.open(whatsappURL, '_blank');
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+            
+            // Tampilkan pesan sukses
+            alert('Terima kasih! Pesan Anda akan segera kami proses.');
+        }
+    </script>
+</body>
+</html> 
